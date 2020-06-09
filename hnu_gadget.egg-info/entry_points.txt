@@ -1,3 +1,0 @@
-[console_scripts]
-hnu-gadget = hnu_gadget.main:main
-
