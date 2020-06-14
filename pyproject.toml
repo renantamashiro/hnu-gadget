@@ -1,19 +1,17 @@
 [tool.poetry]
 name = "hnu-gadget"
-version = "0.1.0"
+version = "0.5.0"
 description = ""
 authors = ["renantamashiro <tamashirorenan@gmail.com>"]
 repository = "https://www.github.com/renantamashiro/hnu-gadget"
 readme = "README.rst"
 
 [tool.poetry.scripts]
-hnu-gadget = "hnu_gadget.main:main"
+hnu-gadget = "hnu_gadget.__main__:main"
 
 [tool.poetry.dependencies]
 python = "^3.7"
 requests = "^2.23.0"
-click = "^7.1.2"
-toga = "^0.2.15"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

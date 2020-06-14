@@ -38,14 +38,6 @@ python-versions = "*"
 version = "3.0.4"
 
 [[package]]
-category = "main"
-description = "Composable command line interface toolkit"
-name = "click"
-optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
-version = "7.1.2"
-
-[[package]]
 category = "dev"
 description = "Cross-platform colored terminal text."
 marker = "sys_platform == \"win32\""
@@ -53,15 +45,6 @@ name = "colorama"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 version = "0.4.3"
-
-[[package]]
-category = "main"
-description = "An independent implementation of the CSS layout algorithm."
-marker = "sys_platform == \"win32\""
-name = "colosseum"
-optional = false
-python-versions = ">=3.5"
-version = "0.2.0"
 
 [[package]]
 category = "dev"
@@ -109,7 +92,7 @@ description = "More routines for operating on iterables, beyond itertools"
 name = "more-itertools"
 optional = false
 python-versions = ">=3.5"
-version = "8.3.0"
+version = "8.4.0"
 
 [[package]]
 category = "dev"
@@ -198,15 +181,6 @@ testing = ["fields", "hunter", "process-tests (2.0.2)", "six", "pytest-xdist", "
 
 [[package]]
 category = "main"
-description = ".Net and Mono integration for Python"
-marker = "sys_platform == \"win32\""
-name = "pythonnet"
-optional = false
-python-versions = "*"
-version = "2.4.0"
-
-[[package]]
-category = "main"
 description = "Python HTTP for Humans."
 name = "requests"
 optional = false
@@ -224,84 +198,12 @@ security = ["pyOpenSSL (>=0.14)", "cryptography (>=1.3.4)"]
 socks = ["PySocks (>=1.5.6,<1.5.7 || >1.5.7)", "win-inet-pton"]
 
 [[package]]
-category = "main"
-description = "A bridge between an Objective C runtime environment and Python."
-marker = "sys_platform == \"darwin\""
-name = "rubicon-objc"
-optional = false
-python-versions = ">=3.5"
-version = "0.3.1"
-
-[[package]]
 category = "dev"
 description = "Python 2 and 3 compatibility utilities"
 name = "six"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
 version = "1.15.0"
-
-[[package]]
-category = "main"
-description = "A Python native, OS native GUI toolkit."
-name = "toga"
-optional = false
-python-versions = "*"
-version = "0.2.15"
-
-[package.dependencies]
-toga-cocoa = "*"
-toga-gtk = "*"
-toga-winforms = "*"
-
-[[package]]
-category = "main"
-description = "A Cocoa (macOS) backend for the Toga widget toolkit."
-marker = "sys_platform == \"darwin\""
-name = "toga-cocoa"
-optional = false
-python-versions = "*"
-version = "0.2.15"
-
-[package.dependencies]
-rubicon-objc = ">=0.2.8"
-toga-core = ">=0.2.15"
-
-[[package]]
-category = "main"
-description = "A Python native, OS native GUI toolkit."
-marker = "sys_platform == \"darwin\" or sys_platform == \"linux\" or sys_platform == \"win32\""
-name = "toga-core"
-optional = false
-python-versions = "*"
-version = "0.2.15"
-
-[package.dependencies]
-colosseum = ">=0.1.6"
-
-[[package]]
-category = "main"
-description = "A GTK+ backend for the Toga widget toolkit."
-marker = "sys_platform == \"linux\""
-name = "toga-gtk"
-optional = false
-python-versions = "*"
-version = "0.2.15"
-
-[package.dependencies]
-toga-core = ">=0.2.15"
-
-[[package]]
-category = "main"
-description = "A Microsoft .Net backend for the Toga widget toolkit using the WinForms API."
-marker = "sys_platform == \"win32\""
-name = "toga-winforms"
-optional = false
-python-versions = "*"
-version = "0.2.15"
-
-[package.dependencies]
-pythonnet = "*"
-toga-core = ">=0.2.15"
 
 [[package]]
 category = "dev"
@@ -330,7 +232,7 @@ description = "Measures the displayed width of unicode strings in a terminal"
 name = "wcwidth"
 optional = false
 python-versions = "*"
-version = "0.2.3"
+version = "0.2.4"
 
 [[package]]
 category = "dev"
@@ -346,7 +248,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "814518e90fa10937dfd51a5778733d57ae90ae62a11660a474167915c4a1be29"
+content-hash = "14f97e99ed2e8e7579a1078f7fdef693316b31d41eaadad18ee253e2ff4c3682"
 python-versions = "^3.7"
 
 [metadata.files]
@@ -366,17 +268,9 @@ chardet = [
     {file = "chardet-3.0.4-py2.py3-none-any.whl", hash = "sha256:fc323ffcaeaed0e0a02bf4d117757b98aed530d9ed4531e3e15460124c106691"},
     {file = "chardet-3.0.4.tar.gz", hash = "sha256:84ab92ed1c4d4f16916e05906b6b75a6c0fb5db821cc65e70cbd64a3e2a5eaae"},
 ]
-click = [
-    {file = "click-7.1.2-py2.py3-none-any.whl", hash = "sha256:dacca89f4bfadd5de3d7489b7c8a566eee0d3676333fbb50030263894c38c0dc"},
-    {file = "click-7.1.2.tar.gz", hash = "sha256:d2b5255c7c6349bc1bd1e59e08cd12acbbd63ce649f2588755783aa94dfb6b1a"},
-]
 colorama = [
     {file = "colorama-0.4.3-py2.py3-none-any.whl", hash = "sha256:7d73d2a99753107a36ac6b455ee49046802e59d9d076ef8e47b61499fa29afff"},
     {file = "colorama-0.4.3.tar.gz", hash = "sha256:e96da0d330793e2cb9485e9ddfd918d456036c7149416295932478192f4436a1"},
-]
-colosseum = [
-    {file = "colosseum-0.2.0-py3-none-any.whl", hash = "sha256:18f90132d9a05cd96f3b3bb4bc1b3b176596d3c8df34816773c6eae1436e3cd4"},
-    {file = "colosseum-0.2.0.tar.gz", hash = "sha256:0dc7d44dccfc7ea6948530a7c6fcc8685f3d0c51ee80a884f201329bacb1ecb3"},
 ]
 coverage = [
     {file = "coverage-5.1-cp27-cp27m-macosx_10_12_x86_64.whl", hash = "sha256:0cb4be7e784dcdc050fc58ef05b71aa8e89b7e6636b99967fadbdba694cf2b65"},
@@ -420,8 +314,8 @@ importlib-metadata = [
     {file = "importlib_metadata-1.6.1.tar.gz", hash = "sha256:0505dd08068cfec00f53a74a0ad927676d7757da81b7436a6eefe4c7cf75c545"},
 ]
 more-itertools = [
-    {file = "more-itertools-8.3.0.tar.gz", hash = "sha256:558bb897a2232f5e4f8e2399089e35aecb746e1f9191b6584a151647e89267be"},
-    {file = "more_itertools-8.3.0-py3-none-any.whl", hash = "sha256:7818f596b1e87be009031c7653d01acc46ed422e6656b394b0f765ce66ed4982"},
+    {file = "more-itertools-8.4.0.tar.gz", hash = "sha256:68c70cc7167bdf5c7c9d8f6954a7837089c6a36bf565383919bb595efb8a17e5"},
+    {file = "more_itertools-8.4.0-py3-none-any.whl", hash = "sha256:b78134b2063dd214000685165d81c154522c3ee0a1c0d4d113c80361c234c5a2"},
 ]
 packaging = [
     {file = "packaging-20.4-py2.py3-none-any.whl", hash = "sha256:998416ba6962ae7fbd6596850b80e17859a5753ba17c32284f67bfff33784181"},
@@ -447,48 +341,13 @@ pytest-cov = [
     {file = "pytest-cov-2.10.0.tar.gz", hash = "sha256:1a629dc9f48e53512fcbfda6b07de490c374b0c83c55ff7a1720b3fccff0ac87"},
     {file = "pytest_cov-2.10.0-py2.py3-none-any.whl", hash = "sha256:6e6d18092dce6fad667cd7020deed816f858ad3b49d5b5e2b1cc1c97a4dba65c"},
 ]
-pythonnet = [
-    {file = "pythonnet-2.4.0-cp27-cp27m-win32.whl", hash = "sha256:878e27a1a34ebf6b7a160abd1269d75a4fbebf5323e02679ed8226c0ad5fbf10"},
-    {file = "pythonnet-2.4.0-cp27-cp27m-win_amd64.whl", hash = "sha256:1e380e7735b047258da469e36e122d1e0a13f79b4b4902b852a0dc626c0ceb0a"},
-    {file = "pythonnet-2.4.0-cp35-cp35m-win32.whl", hash = "sha256:7be226daafc2d40b30cb80a16e298460bd68f3484d8c7fce1ff82f4f35cda321"},
-    {file = "pythonnet-2.4.0-cp35-cp35m-win_amd64.whl", hash = "sha256:f16af543895fbaadfc593b9c436bf1a2c0e32329f80401aefc316a52e8f9bd18"},
-    {file = "pythonnet-2.4.0-cp36-cp36m-win32.whl", hash = "sha256:38fdb7f5f2e1889175b7d88c64adc902e537d7d646cdc88ee7c0389bb1fdfd34"},
-    {file = "pythonnet-2.4.0-cp36-cp36m-win_amd64.whl", hash = "sha256:0bc4dfe352ab97ee6f00f13ff5b70ce5ba67576913a523cc4ec6e3fdaadf83fd"},
-    {file = "pythonnet-2.4.0-cp37-cp37m-win32.whl", hash = "sha256:e1b3f5d87996302557d876c582590438f71ffe6b7076e79865c6afd57adf476c"},
-    {file = "pythonnet-2.4.0-cp37-cp37m-win_amd64.whl", hash = "sha256:6483dba7db4053da0cb4fdfa3580fed34623ac9100c3d0ce90e7688dc5d3ac47"},
-    {file = "pythonnet-2.4.0.tar.gz", hash = "sha256:a3a38e67fdfcda94df51c805343150016097f284771156f76839a9c3a24c90a9"},
-]
 requests = [
     {file = "requests-2.23.0-py2.py3-none-any.whl", hash = "sha256:43999036bfa82904b6af1d99e4882b560e5e2c68e5c4b0aa03b655f3d7d73fee"},
     {file = "requests-2.23.0.tar.gz", hash = "sha256:b3f43d496c6daba4493e7c431722aeb7dbc6288f52a6e04e7b6023b0247817e6"},
 ]
-rubicon-objc = [
-    {file = "rubicon-objc-0.3.1.tar.gz", hash = "sha256:4d74732edca4059e22cdaf04806c22f8535ef2de2bc16fe085c3748fd757b5a1"},
-    {file = "rubicon_objc-0.3.1-py2.py3-none-any.whl", hash = "sha256:51d19a274f438e004e8a4c39b2e4067d287e79eff80bde582f6b00855e25b345"},
-]
 six = [
     {file = "six-1.15.0-py2.py3-none-any.whl", hash = "sha256:8b74bedcbbbaca38ff6d7491d76f2b06b3592611af620f8426e82dddb04a5ced"},
     {file = "six-1.15.0.tar.gz", hash = "sha256:30639c035cdb23534cd4aa2dd52c3bf48f06e5f4a941509c8bafd8ce11080259"},
-]
-toga = [
-    {file = "toga-0.2.15-py3-none-any.whl", hash = "sha256:8cd2b2a084998ea28b96a34315a86abdbe596958acfe721f8fe1520645060620"},
-    {file = "toga-0.2.15.tar.gz", hash = "sha256:e96ca2ccb1322ee22fdc93ae3d1614f14b1148dcdd7fbca28a36f097ed1b3dfa"},
-]
-toga-cocoa = [
-    {file = "toga-cocoa-0.2.15.tar.gz", hash = "sha256:5b4e3a6dfa937a91aeb9f38d4c0de56ee8e4d19eb3603390795ff2b9ee3cd0dd"},
-    {file = "toga_cocoa-0.2.15-py3-none-any.whl", hash = "sha256:5e5f6461582abf8cfecad8d3cdc47423dd4f6c4e4ee78b1f349b5018e590b2f3"},
-]
-toga-core = [
-    {file = "toga-core-0.2.15.tar.gz", hash = "sha256:d579901465a98b295fcf7cc47e23d769c71e27d1d993271fed2e6403645d3550"},
-    {file = "toga_core-0.2.15-py3-none-any.whl", hash = "sha256:3db121db88a8ea44c271ed33c6561fd4522ebef267865300f966663ad72f4049"},
-]
-toga-gtk = [
-    {file = "toga-gtk-0.2.15.tar.gz", hash = "sha256:ec585736a4331013ab72c3fdc08d00af398e23aadf93ad79271e283e4de719f1"},
-    {file = "toga_gtk-0.2.15-py3-none-any.whl", hash = "sha256:a5b8bcff69a8e30fae054163310d010b5aeaf7dc57ac4dabe4c572dc5c4fb321"},
-]
-toga-winforms = [
-    {file = "toga-winforms-0.2.15.tar.gz", hash = "sha256:067526db09fa0968d8032a757d6678e61968d05bf45ae956b1bdaf48beab3788"},
-    {file = "toga_winforms-0.2.15-py3-none-any.whl", hash = "sha256:af19cb89cc4791a9b16aff4b195cfd810bc760a0bd48ef4564eae355d2e02401"},
 ]
 toml = [
     {file = "toml-0.10.1-py2.py3-none-any.whl", hash = "sha256:bda89d5935c2eac546d648028b9901107a595863cb36bae0c73ac804a9b4ce88"},
@@ -499,8 +358,8 @@ urllib3 = [
     {file = "urllib3-1.25.9.tar.gz", hash = "sha256:3018294ebefce6572a474f0604c2021e33b3fd8006ecd11d62107a5d2a963527"},
 ]
 wcwidth = [
-    {file = "wcwidth-0.2.3-py2.py3-none-any.whl", hash = "sha256:980fbf4f3c196c0f329cdcd1e84c554d6a211f18e252e525a0cf4223154a41d6"},
-    {file = "wcwidth-0.2.3.tar.gz", hash = "sha256:edbc2b718b4db6cdf393eefe3a420183947d6aa312505ce6754516f458ff8830"},
+    {file = "wcwidth-0.2.4-py2.py3-none-any.whl", hash = "sha256:79375666b9954d4a1a10739315816324c3e73110af9d0e102d906fdb0aec009f"},
+    {file = "wcwidth-0.2.4.tar.gz", hash = "sha256:8c6b5b6ee1360b842645f336d9e5d68c55817c26d3050f46b235ef2bc650e48f"},
 ]
 zipp = [
     {file = "zipp-3.1.0-py3-none-any.whl", hash = "sha256:aa36550ff0c0b7ef7fa639055d797116ee891440eac1a56f378e2d3179e0320b"},

@@ -31,7 +31,7 @@ def windows_tk(stories):
     return window
 
 
-def main():
+def run():
     stories = hackernews.stories_id()
     window = windows_tk(stories[:4])
     window.mainloop()
