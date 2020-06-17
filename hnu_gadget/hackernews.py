@@ -1,18 +1,33 @@
 import requests
+import webbrowser
 
 
-def stories_id():
-    API_URL = 'https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty'
+class Story:
+    def __init__(self, data):
+        self.title = data['title']
+        self.url = data['url']
 
-    with requests.get(API_URL) as response:
-        response.raise_for_status()
-        return response.json()
+    def access_url(self):
+        webbrowser.open(self.url, autoraise=True)
 
 
-def story(id_story):
-    API_URL = f'https://hacker-news.firebaseio.com/v0/item/{id_story}.json?print=pretty'
+class API:
 
-    with requests.get(API_URL) as response:
-        response.raise_for_status()
-        return response.json()
+    @classmethod
+    def stories(self, number):
+        API_URL = 'https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty'
+
+        with requests.get(API_URL) as response:
+            response.raise_for_status()
+            data = response.json()
+        return data[:number]
+
+    @classmethod
+    def story(self, id_story):
+        API_URL = f'https://hacker-news.firebaseio.com/v0/item/{id_story}.json?print=pretty'
+
+        with requests.get(API_URL) as response:
+            response.raise_for_status()
+            data = response.json()
+        return data
 
