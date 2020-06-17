@@ -1,32 +1,24 @@
-import tkinter as tk
+import toga
 
 from . import hackernews
 
 
-def windows_tk(stories):
-    window = tk.Tk()
+def build(app):
+    box = toga.Box()
 
-    window.rowconfigure(5, minsize=100, weight=1)
-    window.columnconfigure([0], minsize=50, weight=1)
-    u = 0
-    for i in stories:
-        btn = tk.Button(master=window,
-                        text=f"{i.title}",
-                        command=i.access_url)
-        btn.grid(row=u, column=0)
-        u += 1
+    stories = set(hackernews.API.stories(5))
+    st = {hackernews.Story(hackernews.API.story(i)) for i in stories}
 
-    return window
+    for i in st:
+        btn = toga.Button(f'{i.title}', on_press=i.access_url)
+        box.add(btn)
+
+    return box
+
+
+def main():
+    return toga.App('Hackernews easy', 'renan.tamashiro', startup=build)
 
 
 def run():
-    stories = set(hackernews.API.stories(5))
-    st = {hackernews.Story(hackernews.API.story(i)) for i in stories}
-    window = windows_tk(st)
-    window.mainloop()
-
-#    story = hackernews.story(stories[0])
-#    title = story['title']
-#    url = story['url']
-#    click.secho(title, fg="green")
-#    click.secho(url)
+    main().main_loop()

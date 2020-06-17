@@ -7,7 +7,7 @@ class Story:
         self.title = data['title']
         self.url = data['url']
 
-    def access_url(self):
+    def access_url(self, widget):
         webbrowser.open(self.url, autoraise=True)
 
 
