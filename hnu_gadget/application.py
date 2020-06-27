@@ -1,10 +1,11 @@
 import toga
+from toga.style.pack import Pack, COLUMN
 
 from . import hackernews
 
 
 def build(app):
-    box = toga.Box()
+    box = toga.Box(style=Pack(direction=COLUMN, padding_top=50))
 
     stories = set(hackernews.API.stories(5))
     st = {hackernews.Story(hackernews.API.story(i)) for i in stories}
