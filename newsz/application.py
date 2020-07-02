@@ -5,10 +5,12 @@ from . import hackernews
 
 
 def build(app):
+    # task: create a class for the right container
     right_container = toga.WebView(
         url='https://www.google.com/',
         style=Pack(flex=1))
 
+    # task: create a class for the left container
     left_container = toga.Box(
         style=Pack(flex=1,
                    direction=COLUMN,

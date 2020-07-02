@@ -5,7 +5,7 @@ import webbrowser
 class Story:
     def __init__(self, data):
         self.title = data['title']
-        self.url = data['url']
+        self.url = data['url'] if 'url' in data.keys() else None
 
     def access_url(self, widget):
         webbrowser.open(self.url, autoraise=True)
