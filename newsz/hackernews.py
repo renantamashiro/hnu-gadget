@@ -5,14 +5,16 @@ import webbrowser
 class Story:
     def __init__(self, data):
         self.title = data['title']
-        self.url = data['url'] if 'url' in data.keys() else None
+        self.url = data['url'] if 'url' in data.keys() else 'Withou url'
 
     def access_url(self, widget):
-        webbrowser.open(self.url, autoraise=True)
+        if self.url.startswith('https://'):
+            webbrowser.open(self.url, autoraise=True)
+        else:
+            return False
 
 
 class API:
-
     @classmethod
     def stories(self, number):
         API_URL = 'https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty'
