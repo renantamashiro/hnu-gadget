@@ -4,6 +4,18 @@ from toga.style.pack import Pack, COLUMN, RIGHT
 from . import hackernews
 
 
+class Newsz(toga.App):
+    def startup(self):
+        self.main_window = toga.MainWindow(title=self.name, size=(1024,768))
+
+        # add content to the main window (ex: box, webview, etc)
+
+        # show the main window
+        self.main_window.show()
+
+
+
+
 def build(app):
     # task: create a class for the right container
     right_container = toga.WebView(
