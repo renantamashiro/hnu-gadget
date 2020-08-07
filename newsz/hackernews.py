@@ -5,7 +5,7 @@ import webbrowser
 class Story:
     def __init__(self, data):
         self.title = data['title']
-        self.url = data['url'] if 'url' in data.keys() else 'Withou url'
+        self.url = data['url'] if 'url' in data.keys() else 'Without url'
 
     def access_url(self, widget):
         if self.url.startswith('https://'):

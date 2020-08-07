@@ -21,7 +21,7 @@ def build(app):
         url='https://www.google.com/',
         style=Pack(flex=1))
 
-    stories = set(hackernews.API.stories(5))
+    stories = set(hackernews.API.stories(10))
     stories_data = {hackernews.Story(hackernews.API.story(i)) for i in stories}
 
     left_container = main_block.LeftContainer()
