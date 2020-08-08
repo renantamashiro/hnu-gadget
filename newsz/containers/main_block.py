@@ -17,17 +17,17 @@ class LeftContainer(toga.Box):
     def generate(self, stories):
         for story in stories:
             main_button = button.Article(
-                title=f'{story.title}',
+                label=f'{story.title}',
                 action=story.access_url
             )
             save_button = button.Auxiliary(
-                title='Save1',
+                label='Save1',
                 action=None
             )
             access_button = button.Auxiliary(
-                title='Save2',
+                label='Save2',
                 action=None
             )
             children_label = [main_button, save_button, access_button]
-            label = button.Label(children_label)
+            label = button.Field(children_label)
             self.add(label)

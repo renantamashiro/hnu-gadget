@@ -8,6 +8,7 @@ class Story:
         self.url = data['url'] if 'url' in data.keys() else 'Without url'
 
     def access_url(self, widget):
+        print(widget.label)
         if self.url.startswith('https://'):
             webbrowser.open(self.url, autoraise=True)
         else:
@@ -32,4 +33,3 @@ class API:
             response.raise_for_status()
             data = response.json()
         return data
-
