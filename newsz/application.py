@@ -7,8 +7,10 @@ from newsz.containers import main_block
 
 
 class Newsz(toga.App):
-    def startupA(self):
-        self.webview = toga.WebView(url='www.google.com')
+    def startup(self):
+        self.main_window = toga.MainWindow(size=(1024, 768), title=self.name)
+
+        self.webview = toga.WebView(url='www.google.com', style=Pack(flex=1))
         self.button_box = toga.Box(
             style=Pack(
                 flex=1,
@@ -20,6 +22,13 @@ class Newsz(toga.App):
         self.stories = {}
 
         self.generate_buttons()
+
+        box = toga.Box(children=[self.button_box, self.webview])
+
+        self.main_window.content = box
+        self.main_window.full_screen = True
+
+        self.main_window.show()
 
     def generate_buttons(self):
 
@@ -47,8 +56,8 @@ class Newsz(toga.App):
             )
             self.button_box.add(button_field)
 
-    def startup(self):
-        pass
+    # def startup(self):
+        # pass
         # self.main_window = toga.MainWindow(title=self.name, size=(1024, 768))
 
         # add content to the main window (ex: box, webview, etc)
@@ -57,7 +66,7 @@ class Newsz(toga.App):
         # self.main_window.show()
 
     def load_page(self, widget):
-        pass
+        self.webview.url = self.stories[widget.label]
 
 
 def build(app):
@@ -76,7 +85,7 @@ def build(app):
 
 
 def main():
-    return toga.App('Hackernews easy', 'renan.tamashiro', startup=build)
+    return Newsz('Hackernews easy', 'renan.tamashiro')
 
 
 def run():
