@@ -58,21 +58,6 @@ class Newsz(toga.App):
     def load_page(self, widget):
         self.webview.url = self.stories[widget.label]
 
-# def build(app):
-    # right_container = toga.WebView(
-        # url='https://www.google.com/',
-        # style=Pack(flex=1))
-
-    # stories = set(hackernews.API.stories(10))
-    # stories_data = {
-    # hackernews.Story(hackernews.API.story(i)) for i in stories
-    # }
-    # left_container = main_block.LeftContainer()
-    # left_container.generate(stories_data)
-    # box = toga.Box(children=[left_container, right_container])
-
-    # return box
-
 
 def main():
     return Newsz('Hackernews easy', 'renan.tamashiro')
