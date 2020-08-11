@@ -1,8 +1,8 @@
 import toga
 from toga.style.pack import Pack, COLUMN, RIGHT
 
-from . import hackernews
-from newsz.elements import button
+import hackernews
+from elements import button
 
 
 class Newsz(toga.App):
@@ -25,7 +25,6 @@ class Newsz(toga.App):
         box = toga.Box(children=[self.button_box, self.webview])
 
         self.main_window.content = box
-        self.main_window.full_screen = True
 
         self.main_window.show()
 

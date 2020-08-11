@@ -1,6 +1,4 @@
-hnu_gadget.egg-info
-*.egg-info
 __pycache__
 docs
-dist
 .coverage
+venv
