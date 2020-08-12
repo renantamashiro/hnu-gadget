@@ -18,7 +18,7 @@ class Article(toga.Button):
         self.label = label
         self.on_press = action
         self.style = Pack(
-            width=1024,
+            width=860,
             height=50
         )
 

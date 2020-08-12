@@ -9,7 +9,8 @@ class Newsz(toga.App):
     def startup(self):
         self.main_window = toga.MainWindow(size=(1024, 768), title=self.name)
 
-        self.webview = toga.WebView(url='www.google.com', style=Pack(flex=1))
+        self.webview = toga.WebView(style=Pack(flex=1))
+        self.webview.url = 'https://google.com'
         self.button_box = toga.Box(
             style=Pack(
                 flex=1,
