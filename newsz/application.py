@@ -35,7 +35,7 @@ class Newsz(toga.App):
         stories_data = {
             hackernews.Story(hackernews.API.story(i)) for i in stories
         }
-
+        
         for story in stories_data:
             self.stories[story.title] = story.url
             main_button = button.Article(
