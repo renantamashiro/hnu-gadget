@@ -7,7 +7,7 @@ idna==2.10
 more-itertools==8.4.0
 packaging==20.4
 pluggy==0.13.1
-py==1.9.0
+py==1.10.0
 pycairo==1.19.1
 PyGObject==3.36.1
 pyparsing==2.4.7
